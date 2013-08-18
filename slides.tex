@@ -20,9 +20,9 @@
                , shapes
                }
 
-% Cache TikZ figures
-\usetikzlibrary{external}
-\tikzexternalize[prefix=tikzcache/]
+%% Cache TikZ figures
+%\usetikzlibrary{external}
+%\tikzexternalize[prefix=tikzcache/]
 
 % Use the UoM Beamer Theme
 \usetheme[darktitle,cabin,framenumber,totalframenumber]{UniversityOfManchester}
@@ -37,8 +37,58 @@
 	
 	\maketitle
 	
-	\begin{frame}{Motivation}
-		
+	\begin{frame}{(Artificial) Neural Networks}
+		\center
+		\only<1>{\input{|"python figures/ann-example.py 0"}}%
+		\only<2>{\input{|"python figures/ann-example.py 1"}}%
+		%Enable Me!
 	\end{frame}
+	
+	\begin{frame}{Tree Topology}
+		\center
+		\input{figures/binary-tree}
+	\end{frame}
+	
+	\begin{frame}{Torus Topology}
+		\center
+		\input{figures/mesh}
+	\end{frame}
+	
+	\begin{frame}{Wiring Constraints}
+		\begin{itemize}
+			\item \textbf{Cheap} Cables
+			\item \textbf{Short} Cables
+			\item \textbf{Easy} to Assemble (by a human)
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{SpiNNaker in Cabinets}
+		\center
+		\includegraphics[width=\textwidth]{figures/spinnaker106}
+	\end{frame}
+	
+	\begin{frame}{Small-World Topology}
+		% XXX: F'n beamer...
+		\only<1>{\hspace{2cm}\input{figures/torusNetworkB01}}%
+		\only<2>{\hspace{2cm}\input{figures/torusNetworkB01red}}%
+	\end{frame}
+	
+	\begin{frame}{Research Plans}
+		\begin{itemize}
+			\item Simulator Development
+			\item Topology Experiments
+			\item Detailed Architecture Simulation
+			\item Architecture Development \& Evaluation
+		\end{itemize}
+	\end{frame}
+	
+	\begin{darkframes}
+		\begin{frame}{}
+			\vspace{3cm}
+			\begin{center}
+				\Huge{}Any Questions?
+			\end{center}
+		\end{frame}
+	\end{darkframes}
 	
 \end{document}
